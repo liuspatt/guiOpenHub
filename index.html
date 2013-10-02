@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <!-- Title and other stuffs -->
+    <title>Open Hub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <!-- Stylesheets -->
+    <!-- Bootstrap -->
+    <link href="style/bootstrap.css" rel="stylesheet">
+    <!-- Font awesome icon -->
+    <link rel="stylesheet" href="style/font-awesome.css">
+    <!-- Navigation menu -->
+    <link rel="stylesheet" href="style/ddlevelsmenu-base.css">
+    <link rel="stylesheet" href="style/ddlevelsmenu-topbar.css">
+    <!-- cSlider -->
+    <link rel="stylesheet" href="style/slider.css">
+    <!-- PrettyPhoto -->
+    <link rel="stylesheet" href="style/prettyPhoto.css">
+    <!-- Custom style -->
+    <link href="style/style.css" rel="stylesheet">
+    <!-- Responsive Bootstrap -->
+    <link href="style/bootstrap-responsive.css" rel="stylesheet">
+    <link href="style/cupertino/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+
+    <!-- HTML5 Support for IE -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shim.js"></script>
+    <![endif]-->
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon/favicon.png"></head>
+
+<body>
+
+    <!-- Sliding panel starts-->
+    <!-- Sliding panel ends-->
+
+    <!-- Header starts -->
+
+    <header>
+        <div class="container">
+            <div class="row">
+
+                <div class="span2">
+                    <!-- Logo starts -->
+                    <div class="logo">
+                        <div class="logo-text">
+                            <h1>
+                                <a href="index.html">
+                                    OPEN
+                                    <span class="lightblue">HUB</span>
+                                </a>
+                            </h1>
+                            <div class="logo-meta">Analyzer Repositories</div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <!-- Logo ends --> </div>
+
+                <div class="span3">
+                    <div class="topSearch">
+                        <input type=search name=s placeholder="Search or type a command"></div>
+                </div>
+
+                <div class="span7">
+
+                    <!-- Navbar starts -->
+
+                    <div class="navi pull-right">
+                        <div id="ddtopmenubar" class="mattblackmenu">
+                            <!-- Main navigation -->
+                            <!-- Use the background color class in anchor tag for colorful menu -->
+                            <ul>
+
+                                <li>
+                                    <a href="index.html" class="blightblue"> <i class="icon-home"></i>
+                                        Home
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="index.html" class="bred"> <i class="icon-desktop"></i>
+                                        Search
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="index.html" class="bviolet">
+                                        <i class="icon-tablet"></i>
+                                        Explore
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="index.html" class="bgreen">
+                                        <i class="icon-comments"></i>
+                                        Blog
+                                    </a>
+                                </li>
+
+                                <!-- <li>
+                                <a href="index.html" class="borange">
+                                    <i class="icon-camera"></i>
+                                    Team
+                                </a>
+                            </li>
+                            -->
+                            <li>
+                                <a href="contactus.html" class="bblue">
+                                    <i class="icon-envelope-alt"></i>
+                                    Contact
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="navis"></div>
+
+                <!-- Navbar ends -->
+
+                <div class="clearfix"></div>
+
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<div class="clearfix"></div>
+
+<!-- Header ends -->
+<!-- Big box starts -->
+<hr>
+<div class="big-box">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+
+                <!-- Left box -->
+                <div class="big-box-left blightblue">
+                    <!-- Box content -->
+                    <div class="box-content">
+                        <!-- title -->
+                        <div class="box-title">Search a component</div>
+                        <p>Write a name of repository or component name.</p>
+                        <!-- Para -->
+                        <p>
+                            <input type=search name=s placeholder="Search or type a command"></p>
+                        <!-- Button -->
+                        <a href="#" class="btn btn-inverse">Search</a>
+                        <br />
+                        <br />
+                        <!-- Links -->
+                        <div class="box-links">
+                            <a href="#">
+                                Explore repositories
+                                <i class="icon-double-angle-right"></i>
+                            </a>
+                            <a href="#">
+                                Advanced search
+                                <i class="icon-double-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right box -->
+                <div class="big-box-right bblack">
+                    <div class="box-content">
+                        <div class="cDataForm">
+                            <p>Performance</p>
+                            <p class="infoForm">
+                                <label for="amount">Latency range:</label>
+                                <input type="text" id="amount" class='infoInput' readonly />
+                            </p>
+                            <div id="slider-range" class="sliderForm"></div>
+                        </div>
+                        <div class="cDataForm">
+                            <p class="infoForm">
+                                <label for="quality">Quality range:</label>
+                                <input type="text" id="quality" class='infoInput' readonly />
+                            </p>
+                            <div id="slider-quality" class="sliderForm"></div>
+                        </div>
+                        <div class="cDataForm">
+                            <p class="infoForm">
+                                <label for="usability">Usability range:</label>
+                                <input type="text" id="usability" class='infoInput' readonly />
+                            </p>
+                            <div id="slider-usability" class="sliderForm"></div>
+                        </div>
+                        <div class="cDataForm">
+                            <div class="mitadForm">
+                                <p><input type="checkbox" name="option3" value="Cheese"> 
+                                With test?</p>
+                                <p><input type="checkbox" name="option3" value="Cheese"> 
+                                With Security?</p>
+                                <p><input type="checkbox" name="option3" value="Cheese"> 
+                                Do miracles</p>
+                            </div>
+                            <div class="mitadForm">
+                                <p><input type="checkbox" name="option3" value="Cheese"> 
+                                Owasp top 10</p>
+                                <p><input type="checkbox" name="option3" value="Cheese"> 
+                                UX tested</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+
+<!-- Big box ends -->
+
+<!-- CTA Starts -->
+
+<div class="cta">
+    <div class="container bviolet">
+        <div class="row">
+            <div class="span5">
+                <div class="ctas">
+                    <!-- Title and Para -->
+                    <h5>
+                        <i class="icon-arrow-right icon-metroid"></i>
+                        Text molestie vitae molesti
+                    </h5>
+                    <p>
+                        Sed diam nisi, pulvinar vitae molestie vitae molestie hendreri hendrerit, venenatis eget mauris.
+                    </p>
+                </div>
+            </div>
+            <div class="span4">
+                <div class="ctas">
+                    <!-- List -->
+                    <ul>
+                        <li>Usability.</li>
+                        <li>Security.</li>
+                        <li>Other quality test.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="span3">
+                <div class="ctas">
+                    <!-- Button -->
+                    <a href="#" class="btn btn-inverse btn-large">
+                        Learn More
+                        <i class="icon-double-angle-right"></i>
+                    </a>
+                    <p>Join Us</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CTA Ends -->
+
+<!-- Service and Social media starts -->
+
+<div class="service-home">
+    <div class="container">
+        <!-- Title -->
+        <h3 class="title">
+            <i class="icon-arrow-right title-icon"></i>
+            Respositories
+        </h3>
+        <div class="row">
+
+            <!-- Social -->
+            <div class="span3">
+
+                <div class="service-social bblack">
+                    <!-- Big number -->
+                    <div class="service-big">
+                        22,000,
+                        <span class="lightblue">000</span>
+                    </div>
+                    <!-- Labels -->
+                    <div class="label label-important">GitHub</div>
+                    <div class="label label-info">BitBucket</div>
+                    <div class="label label-success">Google Code</div>
+
+                    <hr />
+
+                    <!-- Social media -->
+                    <div class="service-box bblue">
+                        <!-- name and followers -->
+                        <a href="#">
+                            Python
+                            <span class="pull-right">25000</span>
+                        </a>
+                    </div>
+                    <div class="service-box borange">
+                        <!-- name and followers -->
+                        <a href="#">
+                            JavaScript
+                            <span class="pull-right">500</span>
+                        </a>
+                    </div>
+                    <div class="service-box blightblue">
+                        <!-- name and followers -->
+                        <a href="#">
+                            Ruby
+                            <span class="pull-right">25000</span>
+                        </a>
+                    </div>
+                    <div class="service-box bred">
+                        <!-- name and followers -->
+                        <a href="#">
+                            Java
+                            <span class="pull-right">15000</span>
+                        </a>
+                    </div>
+                    <div class="service-box borange">
+                        <!-- name and followers -->
+                        <a href="#">
+                            Php
+                            <span class="pull-right">25000</span>
+                        </a>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                </div>
+
+            </div>
+
+            <!-- Service -->
+
+            <div class="span6 service-list">
+
+                <!--  Service #1 -->
+                <!-- Service icon -->
+                <div class="service-icon">
+                    <i class="icon-camera bred"></i>
+                </div>
+
+                <div class="service-content">
+                    <!-- Title -->
+                    <div class="service-home-meta">something</div>
+                    <h4>We something something</h4>
+                    <p>
+                        Aenean sodales augue ac rhoncus erat hendrerit. Vivamus vel ultricies elit.
+                    </p>
+                </div>
+
+                <hr />
+
+                <!-- Service #2 -->
+
+                <div class="service-icon">
+                    <i class="icon-desktop blightblue"></i>
+                </div>
+
+                <div class="service-content">
+                    <div class="service-home-meta">something</div>
+                    <h4>Our something are something</h4>
+                    <p>
+                        Aenean sodales augue ac rhoncus erat hendrerit. Vivamus vel ultricies elit.
+                    </p>
+                </div>
+
+                <hr />
+
+                <!-- Service #3 -->
+
+                <div class="service-icon">
+                    <i class="icon-cloud borange"></i>
+                </div>
+
+                <div class="service-content">
+                    <div class="service-home-meta">something</div>
+                    <h4>Everything in Cloud</h4>
+                    <p>
+                        Aenean sodales augue ac rhoncus erat hendrerit. Vivamus vel ultricies elit.
+                    </p>
+                </div>
+
+                <hr />
+
+                <!-- Service #4 -->
+
+                <div class="service-icon">
+                    <i class="icon-user bviolet"></i>
+                </div>
+
+                <div class="service-content">
+                    <div class="service-home-meta">something</div>
+                    <h4>something Notch Support</h4>
+                    <p>
+                        Aenean sodales augue ac rhoncus erat hendrerit. Vivamus vel ultricies elit.
+                    </p>
+                </div>
+
+                <br />
+
+                <div class="clearfix"></div>
+
+            </div>
+
+            <!-- Image -->
+            <div class="span3">
+                <!-- <a href="#" class="<span></span>
+            ervice-image">
+            <img src="img/photos/girl2.png" alt="" />
+        </a>
+        -->
+    </div>
+
+</div>
+
+<hr />
+
+</div>
+</div>
+
+<!-- Service and Social media ends -->
+
+<!-- Footer -->
+
+<!-- Below area is for testimonial -->
+<div class="foot blightblue">
+<div class="container">
+<div class="row">
+    <div class="span12">
+
+        <!-- User icon -->
+        <span class="twitter-icon text-center">
+            <i class="icon-user"></i>
+        </span>
+        <p> <em>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum dolor eget nisi
+                <br />
+                fermentum quis hendrerit magna vestibulum."</em> 
+        </p>
+
+    </div>
+</div>
+</div>
+</div>
+
+<footer>
+<div class="container">
+<div class="row">
+
+    <div class="widgets">
+
+        <div class="span3">
+            <div class="fwidget">
+
+                <h4>Contact</h4>
+
+                <p>
+                    Nullam justo nunc, dignissim at convallis posuere, sodales eu orci.
+                </p>
+                <hr />
+                <i class="icon-home"></i>
+                &nbsp; 123, Some Area. Los Angeles, CA, 54321.
+                <hr />
+                <i class="icon-phone"></i>
+                &nbsp; +239-3823-3434
+                <hr />
+                <i class="icon-envelope-alt"></i>
+                &nbsp;
+                <a href="mailto:#">someone@company.com</a>
+                <hr />
+                <div class="social">
+                    <a href="#" class="bblue">
+                        <i class="icon-facebook"></i>
+                    </a>
+                    <a href="#" class="borange">
+                        <i class="icon-google-plus"></i>
+                    </a>
+                    <a href="#" class="blightblue">
+                        <i class="icon-twitter"></i>
+                    </a>
+                    <a href="#" class="bviolet">
+                        <i class="icon-linkedin"></i>
+                    </a>
+                    <a href="#" class="bred">
+                        <i class="icon-pinterest"></i>
+                    </a>
+                    <a href="#" class="borange">
+                        <i class="icon-rss"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="span3">
+            <div class="fwidget">
+                <h4>Categories</h4>
+                <ul>
+                    <li>
+                        <a href="#">Condimentum - Condimentum gravida</a>
+                    </li>
+                    <li>
+                        <a href="#">Etiam at - Condimentum gravida</a>
+                    </li>
+                    <li>
+                        <a href="#">Fusce vel - Condimentum gravida</a>
+                    </li>
+                    <li>
+                        <a href="#">Vivamus - Condimentum gravida</a>
+                    </li>
+                    <li>
+                        <a href="#">Pellentesque - Condimentum gravida</a>
+                    </li>
+                    <li>
+                        <a href="#">Fusce vel - Condimentum gravida</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="span3">
+            <div class="fwidget">
+
+                <h4>Subscribe</h4>
+                <p>
+                    Duis leo risus, condimentum ut posuere ac, vehicula luctus nunc.  Quisque rhoncus, a sodales enim arcu quis turpis.
+                </p>
+                <p>Enter you email to Subscribe</p>
+
+                <form class="form-inline">
+                    <div class="input-append row-fluid">
+                        <input type="text" class="span8" placeholder="Subscribe">
+                        <button type="submit" class="btn btn-danger">Subscribe</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="span3">
+            <div class="fwidget">
+                <h4>Recent Posts</h4>
+                <ul>
+                    <li>
+                        <a href="#">Sed eu leo orci, condimentum gravida metus</a>
+                    </li>
+                    <li>
+                        <a href="#">Etiam at nulla ipsum, in rhoncus purus</a>
+                    </li>
+                    <li>
+                        <a href="#">Fusce vel magna faucibus felis dapibus facilisis</a>
+                    </li>
+                    <li>
+                        <a href="#">Vivamus scelerisque dui in massa</a>
+                    </li>
+                    <li>
+                        <a href="#">Pellentesque eget adipiscing dui semper</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="span12">
+        <div class="copy">
+            <p>
+                Copyright &copy;
+                <a href="#">Your Site</a>
+                -
+                <a href="index-2.html">Home</a>
+                |
+                <a href="aboutus.html">About Us</a>
+                |
+                <a href="faq.html">FAQ</a>
+                |
+                <a href="contactus.html">Contact Us</a>
+            </p>
+        </div>
+    </div>
+
+</div>
+<div class="clearfix"></div>
+</div>
+</footer>
+<!-- JS -->
+<script src="js/jquery.js"></script>
+<!-- jQuery -->
+<script src="js/jquery-ui-1.10.3.custom.js"></script>
+<script src="js/bootstrap.js"></script>
+<!-- Bootstrap -->
+<script src="js/jquery.prettyPhoto.js"></script>
+<!-- prettyPhoto -->
+<script src="js/jquery.isotope.js"></script>
+<!-- isotope -->
+<script src="js/ddlevelsmenu.js"></script>
+<!-- Navigation menu -->
+<script src="js/jquery.cslider.js"></script>
+<!-- jQuery cSlider -->
+<script src="js/modernizr.custom.28468.js"></script>
+<!-- Extra script for cslider -->
+
+<script src="js/filter.js"></script>
+<!-- Support -->
+<script src="js/custom.js"></script>
+<!-- Custom JS -->
+
+<script>
+  $(function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 1500,
+      values: [ 75, 300 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "" + ui.values[ 0 ] + "ms - " + ui.values[ 1 ]+ " ms" );
+      }
+    });
+    $( "#amount" ).val($( "#slider-range" ).slider( "values", 0 ) + " ms - " + $( "#slider-range" ).slider( "values", 1 )+ " ms");
+  $( "#slider-quality" ).slider({
+      min: 0,
+      max: 100,
+      values: [50],
+      slide: function( event, ui ) {
+        $( "#quality" ).val( "" + ui.values[ 0 ] + "%" );
+      }
+    });
+    $( "#quality" ).val($( "#slider-quality" ).slider( "values", 0 ) + " %");
+$( "#slider-usability" ).slider({
+      min: 0,
+      max: 100,
+      values: [50],
+      slide: function( event, ui ) {
+        $( "#usability" ).val( "" + ui.values[ 0 ] + "%" );
+      }
+    });
+    $( "#usability" ).val($( "#slider-usability" ).slider( "values", 0 ) + " %");
+  });
+
+  
+</script>
+
+</body>
+
+</html>
